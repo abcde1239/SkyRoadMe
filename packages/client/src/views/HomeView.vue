@@ -12,10 +12,17 @@ onMounted(() => {
   });
   totalHeight.value = `${window.innerHeight * 5}px`;
   unitStyle.height = `${window.innerHeight}px`;
+  setInterval(Aos.refresh, 500);
 });
 import BG from "@/components/BG.vue";
 import Footer from "@/components/Footer.vue";
 import PostCard from "@/components/Profile/PostCard.vue";
+import TechCard from "@/components/Profile/TechCard.vue";
+import Aos from "aos";
+import AnimCard from "@/components/Profile/AnimCard.vue";
+import GameCard from "@/components/Profile/GameCard.vue";
+import MemberCard from "@/components/Profile/MemberCard.vue";
+import AnotherCard from "@/components/Profile/AnotherCard.vue";
 </script>
 
 <template>
@@ -27,12 +34,26 @@ import PostCard from "@/components/Profile/PostCard.vue";
     <div class="image_2" style="flex">
       <div class="p-5">
         <PostCard data-aos="flip-right" class="ml-50" />
+        <TechCard data-aos="flip-left" class="relative -top-15 ml-auto mr-25" />
       </div>
     </div>
     <BG text="好集美前川" />
-    <div class="image_3" style="flex"></div>
+    <div class="image_3" style="flex">
+      <div class="p-5">
+        <AnimCard data-aos="flip-right" class="ml-50" />
+        <GameCard data-aos="flip-left" class="relative -top-15 ml-auto mr-25" />
+      </div>
+    </div>
     <BG text="好闺蜜御船流子" />
-    <div class="image_4" style="flex"></div>
+    <div class="image_4" style="flex">
+      <div class="p-5">
+        <MemberCard class="ml-50" data-aos="flip-right" />
+        <AnotherCard
+          data-aos="flip-left"
+          class="relative -top-15 ml-auto mr-25"
+        />
+      </div>
+    </div>
     <BG text="好姑姑藤和女女" />
     <div class="image_5" style="flex">
       <Epilogue :style="unitStyle" class="mt-auto" />

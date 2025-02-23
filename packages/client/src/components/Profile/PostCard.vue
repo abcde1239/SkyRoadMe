@@ -28,7 +28,7 @@
               icon="uil:github"
               class="cursor-pointer"
               size="14"
-              @click="() => jumpTo('https://github.com/Azzellz')"
+              @click="() => jumpTo('https://github.com/abcde1239')"
             />
             <Icon
               icon="material-symbols:book-2"
